@@ -1,0 +1,18 @@
+.body1{
+    background-image: url("img/bg1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh; 
+    overflow: hidden;
+  }
+.card-custom {
+    width: 540px !important;
+    height: 570px !important;
+    margin: 0 auto; 
+    background-color: #641010 !important; 
+}
+.img-thumbnail{
+    background-color: transparent !important;
+    border: none !important;
+  }
