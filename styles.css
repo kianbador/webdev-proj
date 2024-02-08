@@ -12,6 +12,9 @@
     margin: 0 auto; 
     background-color: #641010 !important; 
 }
+.hh4{
+  font-weight: bold;
+}
 .img-thumbnail{
     background-color: transparent !important;
     border: none !important;
@@ -24,4 +27,17 @@
 }
 .img-link{
   text-decoration: none !important;
+}
+.navbar{
+  background-color: #641010 !important;
+}
+.nav-link{
+  font-weight: bold;
+}
+.btn.btn-outline-light.dropdown-toggle.text-light{
+  border: none !important;
+
+}
+.btn.btn-outline-light.dropdown-toggle.text-light:hover {
+  background-color: #861515;
 }
