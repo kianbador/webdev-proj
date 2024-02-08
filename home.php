@@ -8,15 +8,15 @@
 <html>
 <head>
     <title class="">Application for New/Replacement ID</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/pup.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="body1">
     <div class="container">
             <div class="row justify-content-end">
-                <div class="col-5">
+                <div class="col-5 col-md-5">
                     <div class="card card-custom px-1 rounded-0 text-light ">
                         <div class="card-body">
                             <div class="text-center">
@@ -139,19 +139,35 @@
                                     <div class="col-12">
                                         <input type="password" name="password" class="form-control form-control-sm rounded-0 mb-4" placeholder="Password">
                                     </div>
-                                    <div class="row justify-content-center mb-4">
+                                    <div class="text-center mb-2">
+                                        <button type="submit" name="submit" class="btn btn-sm btn-warning w-100">Sign in</button>
+                                    </div>
+                                    <div class="row justify-content-center mb-3">
                                         <div class="col-auto">
                                             <div class="form-check">
                                                 <input class="form-check-input bg-success rounded-0" type="checkbox" value="" id="myCheckbox">
-                                                <small>I have read and agree to the <a class="text-warning" href="">Terms & Conditions</a></small>
+                                                <small>I have read and agree to the <a class="terms text-warning" href="https://www.pup.edu.ph/terms/" target="_blank">Terms of Use</a> & <a href="https://www.pup.edu.ph/privacy/" target="_blank" class="terms text-warning">Privacy Statements</a></small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 text-center">
-                                        <button type="submit" name="submit" class="btn btn-warning btn-block">Sign in</button>
-                                    </div>
                                 </div>
                             </form>
+                            <div class="row mb-3 text-center">
+                                <div class="col-md-12">
+                                    <a class="img-link" href="https://www.facebook.com/ThePUPOfficial/">
+                                        <img src="img/fb_logo.png" alt="Image 1" class="img-fluid rounded img-thumbnail" width="30" height="30">
+                                    </a>
+                                    <a class="img-link" href="https://twitter.com/thepupofficial">
+                                        <img src="img/x_logo.png" alt="Image 2" class="img-fluid rounded img-thumbnail" width="30" height="30">
+                                    </a>
+                                    <a class="img-link" href="https://www.youtube.com/user/pupcreatv">
+                                        <img src="img/yt_logo.png" alt="Image 3" class="img-fluid rounded img-thumbnail" width="30" height="30">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <small>I don't have an account. <a href="" class="terms text-warning">Sign up</a></small>
+                            </div>
                         </div>
                     </div>
                 </div>

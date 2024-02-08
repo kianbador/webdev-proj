@@ -16,3 +16,12 @@
     background-color: transparent !important;
     border: none !important;
   }
+.terms{
+    text-decoration: none !important;
+}
+.terms:hover{
+  text-decoration: underline !important;
+}
+.img-link{
+  text-decoration: none !important;
+}
