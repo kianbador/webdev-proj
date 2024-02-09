@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 .body1{
     background-image: url("img/bg1.png");
     background-size: cover;
@@ -6,6 +9,28 @@
     height: 85vh; 
     overflow: hidden;
   }
+  .body2{
+    background-image: url("img/body2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 85vh; 
+  }
+.section1{
+    background-image: url("img/section1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120vh;
+  }
+.section2{
+    background-image: url("img/section2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120vh;
+  }
 .card-custom {
     width: 540px !important;
     height: 570px !important;
@@ -13,7 +38,8 @@
     background-color: #641010 !important; 
 }
 .hh4{
-  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold !important;
 }
 .img-thumbnail{
     background-color: transparent !important;
@@ -34,10 +60,42 @@
 .nav-link{
   font-weight: bold;
 }
-.btn.btn-outline-light.dropdown-toggle.text-light{
+.btn.btn-outline-danger.text-light.dropdown-toggle{
   border: none !important;
 
 }
-.btn.btn-outline-light.dropdown-toggle.text-light:hover {
-  background-color: #861515;
+.btn.btn-outline-danger.text-light.dropdown-toggle:hover {
+  background-color: #dc3545;
+}
+.dropdown-menu {
+  left: 20% !important;
+  transform: translateX(-50%);
+}
+.text-justify {
+  text-align: justify !important;
+}
+.custom-btn{
+  border-radius: 30px;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: bold;
+}
+.danger-link{
+  background-color: #800201;
+  border: none;
+}
+.custom-small{
+  font-weight: bold !important;
+}
+.custom-container{
+  background-color: #800201 !important;
+  border-radius: 30px; 
+  border: 1px solid #ffffff; 
+  padding: 20px;
+}
+.submit-btn{
+  border-radius: 50px;
+  font-size: 15px;
+  padding: 5px;
+  padding-inline: 15px;
 }

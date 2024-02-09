@@ -11,51 +11,52 @@
     <title class="">Application for New/Replacement ID</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm fixed-top">
         <div class="container-fluid">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active p-0" href=""><img src="img/nav-logo.png" alt="Image" class="img-thumbnail ms-3 me-5" width="180" height="60"></a>
+                    <a class="nav-link active p-0" href="home.php"><img src="img/nav-logo.png" alt="Image" class="img-thumbnail ms-3 me-5" width="180" height="60"></a>
                 </li>
 
                 <li class="nav-item me-5">
-                    <a href="" class="text-warning terms nav-link p-0 ms-4 mt-5"><i class="bi bi-house-fill"></i> Home</a>
+                    <a href="home.php" class="text-warning terms nav-link p-0 ms-4 mt-5"><i class="bi bi-house-fill"></i> Home</a>
                 </li>
 
                 <li class="nav-item me-5">
-                    <a href="" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-info-circle-fill"></i> About Us</a>
+                    <a href="https://www.pup.edu.ph/about/" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-info-circle-fill"></i> About Us</a>
                 </li>
 
                 <li class="nav-item me-5">
-                    <a href="" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-mortarboard-fill"></i> Academic</a>
+                    <a href="https://www.pup.edu.ph/academic/" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-mortarboard-fill"></i> Academic</a>
                 </li>
 
                 <li class="nav-item me-5">
-                    <a href="" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-person-lines-fill"></i> Student</a>
+                    <a href="https://www.pup.edu.ph/students/" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-person-lines-fill"></i> Students</a>
                 </li>
 
                 <li class="nav-item me-5">
-                    <a href="" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-search"></i> Research</a>
+                    <a href="https://www.pup.edu.ph/researcher/" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-search"></i> Research</a>
                 </li>
                 
                 <li class="nav-item me-5">
-                    <a href="" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-telephone-fill"></i> Contact Us</a>
+                    <a href="https://www.pup.edu.ph/about/contactus" class="text-warning terms nav-link p-0 ms-3 mt-5"><i class="bi bi-telephone-fill"></i> Contact Us</a>
                 </li>
 
-                <li class="nav-item">
-                    <div class="dropdown mt-3">
-                        <button class="btn btn-lg btn-outline-light dropdown-toggle text-light">
+                <li class="nav-item mt-4">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-outline-danger text-light dropdown-toggle btn-lg" data-bs-toggle="dropdown">
                             <i class="bi bi-person-circle"></i>
                         </button>
                         <ul class="dropdown-menu text-center">
-                            <li><a class="dropdown-item btn btn-outline-dark" href="">Profile</a></li>
-                            <li><a class="dropdown-item mt-2 btn btn-outline-dark" href="">Appointment</a></li>
-                            <li><a class="btn btn-outline-danger mt-2" href="">Log out</a></li>
+                            <li><a class="dropdown-item btn btn-outline-danger mb-2 p-0" href="#">Profile</a></li>
+                            <li><a class="dropdown-item btn btn-outline-danger mb-3 p-0" href="#">Appointment</a></li>
+                            <li><a class="btn btn-outline-danger" href="#">Sign out</a></li>
                         </ul>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

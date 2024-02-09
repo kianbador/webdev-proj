@@ -30,6 +30,7 @@
                             </div>
                             <form action="">
                                 <div class="row">
+                                    <div class="col-12">
                                         <input type="text" class="form-control form-control-sm rounded-0 mb-4" placeholder="Student Number">
                                     </div>
                                     <div class="col-4 mb-4">

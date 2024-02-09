@@ -34,7 +34,7 @@
                                         <input type="text" name="student_no" class="form-control form-control-sm rounded-0 mb-4" placeholder="Student Number">
                                     </div>
                                     <div class="col-12">
-                                        <input type="email" name="email" class="form-control form-control-sm rounded-0 mb-4" placeholder="Email">
+                                        <input type="email" name="webmail" class="form-control form-control-sm rounded-0 mb-4" placeholder="Webmail">
                                     </div>
                                     <div class="col-4 mb-4">
                                         <select name="month" class="form-select form-select-sm rounded-0">
