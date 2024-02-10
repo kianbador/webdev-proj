@@ -1,4 +1,25 @@
 <?php 
+    include 'config/conn.php';
+
+    if(isset($_POST['submit'])){
+        $stud_no = $_POST['stud_no'];
+        $bday = $_POST['year'].'-'.$_POST['month'].'-'.$_POST['day'];
+        $password = $_POST['password'];
+
+        $stud_no = mysqli_real_escape_string($conn, $stud_no);
+        $bday = mysqli_real_escape_string($conn, $bday );
+        $password = mysqli_real_escape_string($conn, $password);
+
+        $check_query = "SELECT * FROM student_tbl WHERE stud_no = '$stud_no' and birthdate = '$bday' and password = '$password'";
+        $check_result = mysqli_query($conn, $check_query);
+
+        if ($check_result && mysqli_num_rows($check_result) > 0) {
+            header('Location:home.php');
+        }
+        else{
+            echo "<script>alert('Invalid Sign in credentials.');</script>";
+        }
+    }
 
 
 
@@ -28,14 +49,14 @@
                                 </h4>
                                 <small>Sign in to start your session</small>
                             </div>
-                            <form action="">
+                            <form action="login.php" method="POST" class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col-12">
-                                        <input type="text" class="form-control form-control-sm rounded-0 mb-4" placeholder="Student Number">
+                                        <input type="text" name="stud_no" class="form-control form-control-sm rounded-0 mb-4" placeholder="Student Number" required>
                                     </div>
                                     <div class="col-4 mb-4">
-                                        <select name="month" class="form-select form-select-sm rounded-0">
-                                            <option disabled selected>Birth Month</option>
+                                        <select name="month" class="form-select form-select-sm rounded-0" required>
+                                            <option value="" disabled selected>Birth Month</option>
                                             <option value="1">January</option>
                                             <option value="2">February</option>
                                             <option value="3">March</option>
@@ -51,8 +72,8 @@
                                         </select>
                                     </div>
                                     <div class="col-4">
-                                        <select name="day" class="form-select form-select-sm rounded-0">
-                                            <option disabled selected>Birth Day</option>
+                                        <select name="day" class="form-select form-select-sm rounded-0" required>
+                                            <option value="" disabled selected>Birth Day</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -88,7 +109,7 @@
                                     </div>
                                     <div class="col-4">
                                         <select name="year" class="form-select form-select-sm rounded-0" required>
-                                            <option disabled selected>Birth Year</option>
+                                            <option value="" disabled selected>Birth Year</option>
                                             <option value="2014">2014</option>
                                             <option value="2013">2013</option>
                                             <option value="2012">2012</option>
@@ -137,7 +158,7 @@
                                         </select>
                                     </div>
                                     <div class="col-12">
-                                        <input type="password" name="password" class="form-control form-control-sm rounded-0 mb-4" placeholder="Password">
+                                        <input type="password" name="password" class="form-control form-control-sm rounded-0 mb-4" placeholder="Password" required>
                                     </div>
                                     <div class="text-center mb-2">
                                         <button type="submit" name="submit" class="btn btn-sm btn-warning w-100">Sign in</button>
@@ -145,7 +166,7 @@
                                     <div class="row justify-content-center mb-3">
                                         <div class="col-auto">
                                             <div class="form-check">
-                                                <input class="form-check-input bg-success rounded-0" type="checkbox" value="" id="myCheckbox">
+                                                <input class="form-check-input bg-success rounded-0" type="checkbox" value="" id="myCheckbox" required>
                                                 <small>I have read and agree to the <a class="terms text-warning" href="https://www.pup.edu.ph/terms/" target="_blank">Terms of Use</a> & <a href="https://www.pup.edu.ph/privacy/" target="_blank" class="terms text-warning">Privacy Statements</a></small>
                                             </div>
                                         </div>
@@ -175,5 +196,5 @@
         </div>
 </body>
 
-<script src="valid.js"></script>
+<script src="login_valid.js"></script>
 </html>

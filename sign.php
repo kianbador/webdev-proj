@@ -1,6 +1,40 @@
 <?php 
+    include "config/conn.php";
 
+    if (isset($_POST['submit'])){
 
+        $stud_no = $_POST['stud_no'];
+        $stud_no = mysqli_real_escape_string($conn, $stud_no);
+        $stmt = $conn->prepare("SELECT stud_no FROM student_tbl WHERE stud_no = ?");
+        $stmt->bind_param("s", $stud_no);
+        $stmt->execute();
+        $stmt->bind_result($resultStudent);
+        $stmt->fetch();
+        if($resultStudent){
+            echo "<script>alert('Student Number Already Exist! Try Again.');</script>";
+        }
+        else{
+            $name = $_POST['fname'].' ' . $_POST['lname'];
+            $webmail = $_POST['webmail'];
+            $bday = $_POST['year'].'-'.$_POST['month'].'-'.$_POST['day'];
+            $password = $_POST['password'];
+
+            $name = mysqli_real_escape_string($conn, $name);
+            $webmail = mysqli_real_escape_string($conn, $webmail);
+            $bday = mysqli_real_escape_string($conn, $bday );
+            $password = mysqli_real_escape_string($conn, $password);
+
+            $sql = "Insert into student_tbl(name, stud_no, webmail, birthdate, password) values ('$name','$stud_no', '$webmail', '$bday', '$password')";
+
+            if(mysqli_query($conn, $sql)){
+                header('Location: login.php');
+            }else{
+                echo 'Query Error: '.mysqli_error($conn);
+                
+            }
+        }
+        
+}
 
 ?>
 
@@ -22,23 +56,23 @@
                             <div class="text-center">
                                 <img src="img/pup.png" alt="logo" class="img-thumbnail mt-1 mb-4" width="80" height="80">
                             </div>
-                            <form action="">
+                            <form action="sign.php" method="POST" class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col-6">
-                                        <input type="text" name="fname" class="form-control form-control-sm rounded-0 mb-4" placeholder="First Name">
+                                        <input type="text" name="fname" id="fname" class="form-control form-control-sm rounded-0 mb-4" placeholder="First Name" required>
                                     </div>
                                     <div class="col-6">
-                                        <input type="text" name="lname" class="form-control form-control-sm rounded-0 mb-4" placeholder="Last Name">
+                                        <input type="text" name="lname" id="lname" class="form-control form-control-sm rounded-0 mb-4" placeholder="Last Name" required>
                                     </div>
                                     <div class="col-12">
-                                        <input type="text" name="student_no" class="form-control form-control-sm rounded-0 mb-4" placeholder="Student Number">
+                                        <input type="text" name="stud_no" id="stud_no" class="form-control form-control-sm rounded-0 mb-4" placeholder="Student Number" required>
                                     </div>
                                     <div class="col-12">
-                                        <input type="email" name="webmail" class="form-control form-control-sm rounded-0 mb-4" placeholder="Webmail">
+                                        <input type="email" name="webmail" id="webmail" class="form-control form-control-sm rounded-0 mb-4" placeholder="Webmail" required>
                                     </div>
                                     <div class="col-4 mb-4">
-                                        <select name="month" class="form-select form-select-sm rounded-0">
-                                            <option disabled selected>Birth Month</option>
+                                        <select name="month" class="form-select form-select-sm rounded-0" required>
+                                            <option value="" disabled selected>Birth Month</option>
                                             <option value="1">January</option>
                                             <option value="2">February</option>
                                             <option value="3">March</option>
@@ -54,8 +88,8 @@
                                         </select>
                                     </div>
                                     <div class="col-4">
-                                        <select name="day" class="form-select form-select-sm rounded-0">
-                                            <option disabled selected>Birth Day</option>
+                                        <select name="day" class="form-select form-select-sm rounded-0" required>
+                                            <option value="" disabled selected>Birth Day</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -91,7 +125,7 @@
                                     </div>
                                     <div class="col-4">
                                         <select name="year" class="form-select form-select-sm rounded-0" required>
-                                            <option disabled selected>Birth Year</option>
+                                            <option value="" disabled selected>Birth Year</option>
                                             <option value="2014">2014</option>
                                             <option value="2013">2013</option>
                                             <option value="2012">2012</option>
@@ -140,10 +174,10 @@
                                         </select>
                                     </div>
                                     <div class="col-12">
-                                        <input type="password" name="password" class="form-control form-control-sm rounded-0 mb-4" placeholder="Password">
+                                        <input type="password" name="password" id="password" class="form-control form-control-sm rounded-0 mb-4" placeholder="Password" required>
                                     </div>
                                     <div class="col-12">
-                                        <input type="password" name="cpassword" class="form-control form-control-sm rounded-0 mb-4" placeholder="Confirm Password">
+                                        <input type="password" name="cpassword" id="cpassword" class="form-control form-control-sm rounded-0 mb-4" placeholder="Confirm Password" required>
                                     </div>
                                     <div class="text-center mb-4">
                                         <button type="submit" name="submit" class="btn btn-sm btn-warning w-100">Sign up</button>
@@ -160,5 +194,5 @@
         </div>
 </body>
 
-<script src="valid.js"></script>
+<script src="signUp_valid.js"></script>
 </html>

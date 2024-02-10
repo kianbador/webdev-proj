@@ -17,17 +17,22 @@
         </div>
         <form action="">
             <div class="row">
+
                 <div class="col-12 mt-4">
-                    <select name="gender" class="form-select form-select-sm rounded-0">
-                        <option disabled selected>Gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
+                    <select name="system" class="form-select form-select-sm rounded-0">
+                        <option value="" disabled selected>System</option>
+                        <option value="LHS">LHS</option>
+                        <option value="Undergrad">Undergrad</option>
+                        <option value="College of Law">College of Law</option>
+                        <option value="Graduate School">Graduate School</option>
+                        <option value="Open University">Open University</option>
+                        <option value="Institute of Technology">Institute of Technology</option>
                     </select>
                 </div>
 
                 <div class="col-12 mt-4">
                     <select name="college" class="form-select form-select-sm rounded-0">
-                        <option disabled selected>College</option>
+                        <option value="" disabled selected>College</option>
                         <option value="CAF">CAF</option>
                         <option value="CADBE">CADBE</option>
                         <option value="CAL">CAL</option>
@@ -50,7 +55,7 @@
 
                 <div class="col-4 mt-4">
                     <select name="year" class="form-select form-select-sm rounded-0">
-                        <option disabled selected>Year</option>
+                        <option value="" disabled selected>Year</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -61,7 +66,7 @@
 
                 <div class="col-4 mt-4">
                     <select name="section" class="form-select form-select-sm rounded-0">
-                        <option disabled selected>Section</option>
+                        <option value="" disabled selected>Section</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -69,6 +74,14 @@
                         <option value="5">5</option>
                         <option value="1N">1N</option>
                         <option value="2N">2N</option>
+                    </select>
+                </div>
+
+                <div class="col-12 mb-4">
+                    <select name="gender" class="form-select form-select-sm rounded-0">
+                        <option value="" disabled selected>Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
                 </div>
 

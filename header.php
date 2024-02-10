@@ -50,7 +50,7 @@
                         <ul class="dropdown-menu text-center">
                             <li><a class="dropdown-item btn btn-outline-danger mb-2 p-0" href="#">Profile</a></li>
                             <li><a class="dropdown-item btn btn-outline-danger mb-3 p-0" href="#">Appointment</a></li>
-                            <li><a class="btn btn-outline-danger" href="#">Sign out</a></li>
+                            <li><a class="btn btn-outline-danger" href="login.php">Sign out</a></li>
                         </ul>
                     </div>
                 </li>

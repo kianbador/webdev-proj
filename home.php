@@ -19,7 +19,7 @@
                     <p class="mt-1 px-4 mx-5 text-light text-justify">Apply or replace your ID with ease, embracing convenience at every step.
                     </p>
                     <div class="mx-5 px-4 mt-5">
-                    <a href="" class="btn btn-warning btn-sm custom-btn">Apply Now!</a>
+                    <a href="form1.php" class="btn btn-warning btn-sm custom-btn">Apply Now!</a>
                     </div>
                 </div>
             </div>
