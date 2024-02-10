@@ -1,3 +1,37 @@
+<?php 
+
+    $reason = '';
+    if(isset($_POST['reason'])){
+        if($_POST['reason']=== 'Transferee'){
+            $reason = $_POST['reason'];
+        }
+        elseif($_POST['reason']=== 'Late Filing'){
+            $reason = $_POST['reason'];
+        }
+        elseif($_POST['reason']=== 'Old ID'){
+            $reason = $_POST['reason'];
+        }
+        elseif($_POST['reason']=== 'Shiftee'){
+            $reason = $_POST['reason'];
+        }
+        elseif($_POST['reason']=== 'Damaged'){
+            $reason = $_POST['reason'];
+        }
+        elseif($_POST['reason']=== 'Correction of Entry'){
+            $reason = $_POST['reason'];
+        }
+    }
+
+    if($reason !== ''){
+        session_start();
+        $_SESSION['reason'] = $reason;
+        header('Location:form2.php');
+        exit();
+
+    }
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,33 +47,35 @@
             <small class="text-light">Please select the reason for applying:</small>
         </div>
         <div class="container">
+            <form action="form1.php" method="POST">
             <div class="row mt-4">
                 <div class="col-6 mb-4">
-                    <a href="" class="btn btn-lg w-100 btn-danger rounded-0 danger-link">Transferee</a>
+                    <button type="submit" name="reason" class="btn btn-lg w-100 btn-danger rounded-0 danger-link" value="Transferee">Transferee</button>
                 </div>
 
                 <div class="col-6 mb-4">
-                    <a href="" class="btn btn-lg w-100 btn-danger rounded-0 danger-link">Late Filing</a>
+                    <button type="submit" name="reason" class="btn btn-lg w-100 btn-danger rounded-0 danger-link" value="Late Filing">Late Filing</button>
                 </div>
 
 
                 <div class="col-6 mb-4">
-                    <a href="" class="btn btn-lg w-100 btn-danger rounded-0 danger-link">Old ID</a>
+                    <button type="submit" name="reason" class="btn btn-lg w-100 btn-danger rounded-0 danger-link" value="Old ID">Old ID</button>
                 </div>
 
                 <div class="col-6 mb-4">
-                    <a href="" class="btn btn-lg w-100 btn-danger rounded-0 danger-link">Shiftee</a>
+                    <button type="submit" name="reason" class="btn btn-lg w-100 btn-danger rounded-0 danger-link" value="Shiftee">Shiftee</button>
                 </div>
 
                 <div class="col-6 mb-4">
-                    <a href="" class="btn btn-lg w-100 btn-danger rounded-0 danger-link">Damaged</a>
+                    <button type="submit" name="reason" class="btn btn-lg w-100 btn-danger rounded-0 danger-link" value="Damaged">Damaged</button>
                 </div>
 
                 <div class="col-6 mb-4">
-                    <a href="" class="btn btn-lg w-100 btn-danger rounded-0 danger-link">Correction of Entry</a>
+                    <button type="submit" name="reason" class="btn btn-lg w-100 btn-danger rounded-0 danger-link" value="Correction of Entry">Correction of Entry</button>
                 </div>
 
             </div>
+            </form>
         </div>
     </div>
 

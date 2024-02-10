@@ -14,14 +14,15 @@
         $check_result = mysqli_query($conn, $check_query);
 
         if ($check_result && mysqli_num_rows($check_result) > 0) {
+            session_start();
+            $_SESSION['stud_no'] = $stud_no;
             header('Location:home.php');
+            exit();
         }
         else{
             echo "<script>alert('Invalid Sign in credentials.');</script>";
         }
     }
-
-
 
 ?>
 
