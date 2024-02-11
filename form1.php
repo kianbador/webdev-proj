@@ -1,5 +1,21 @@
 <?php 
+    include 'config/conn.php';
 
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    $stud_no = isset($_SESSION['stud_no']) ? $_SESSION['stud_no'] : '';
+    $stud_no = mysqli_real_escape_string($conn, $stud_no);
+
+    $sql = "SELECT stud_no FROM application_tbl WHERE stud_no = '$stud_no'";
+
+    $result = $conn->query($sql);
+    if($result->num_rows > 0){
+        echo "<script>alert('You have already applied. Check the link below the profile for updates.');</script>";
+        echo "<script>window.location.href='home.php';</script>";
+        exit(); 
+
+    }
     $reason = '';
     if(isset($_POST['reason'])){
         if($_POST['reason']=== 'Transferee'){

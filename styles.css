@@ -17,6 +17,15 @@ body{
     background-attachment: fixed;
     height: 85vh; 
   }
+  .body3{
+    padding-top: 56px;
+    background-image: url("img/body3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh; 
+  }
 .section1{
     background-image: url("img/section1.png");
     background-size: cover;
@@ -98,4 +107,9 @@ body{
   font-size: 15px;
   padding: 5px;
   padding-inline: 15px;
+}
+.container.bg-danger.py-4.ps-5.mt-5{
+  background-color: #800201 !important;
+  border-radius: 30px; 
+  border: 2px solid #ffffff; 
 }

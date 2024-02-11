@@ -6,6 +6,7 @@
     }
     $stud_no = isset($_SESSION['stud_no']) ? $_SESSION['stud_no'] : '';
     $reason = isset($_SESSION['reason']) ? $_SESSION['reason'] : '';
+    
 
     if(isset($_POST['submit'])){
         $system = $_POST['system'];
