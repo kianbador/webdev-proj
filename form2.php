@@ -48,6 +48,7 @@
             $sql2 = "Insert into application_tbl(reason, system, stud_no, status) values ('$reason', '$system', '$stud_no', 'In Progress')";
             if (mysqli_query($conn, $sql2)) {
                 echo "<script> alert('Form Successfully Recorded.') </script>";
+                echo "<script>window.location.href='home.php';</script>";
             } else {
                 echo "Error updating record: " . mysqli_error($conn);
             }

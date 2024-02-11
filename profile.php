@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-1">
-                <small><a href="" class="terms text-warning"><i class="bi bi-pencil"></i> Edit</a></small>
+                <small><a href="profile_edit.php" class="terms text-warning"><i class="bi bi-pencil"></i> Edit</a></small>
             </div>
         </div>
     </div>
